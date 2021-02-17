@@ -59,4 +59,20 @@ RSpec.describe Cliente do
       end
     end
   end
+
+  describe 'criar' do
+    subject { Cliente.criar(parametros) }
+    
+    let(:id) { 101 }
+    let(:nome) { 'Nome do cliente' }
+    let(:data_nascimento) { '02-07-1987' }
+    let(:parametros) { { id: id, nome: nome, data_nascimento: data_nascimento } }
+    
+    it 'retorna objeto da classe cliente' do
+      expect(subject.class).to be Cliente
+      expect(subject.id).to eq id
+      expect(subject.nome).to eq nome
+      expect(subject.data_nascimento).to eq Date.parse(data_nascimento)
+    end
+  end
 end

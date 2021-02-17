@@ -3,7 +3,7 @@
 ## Introdução
 
 Este projeto foi criado com a intenção de disseminar conceitos de implementação de testes utilizando a linguagem Ruby e suas bibliotecas.
-Nele você encontrará explicações dos principais conceitos e implementações didáticas sobre a aplicação detes conceitos.
+Nele você encontrará explicações dos principais conceitos e implementações didáticas sobre a aplicação destes conceitos.
 
 A biblioteca de testes escolhida para a execução dos testes foi a [Rspec](https://rspec.info/) devido sua alta adoção dentro da comunidade de desenvolvedores e de empresas que utilizam [Ruby](https://www.ruby-lang.org/pt/) como linguagem de programação.
 

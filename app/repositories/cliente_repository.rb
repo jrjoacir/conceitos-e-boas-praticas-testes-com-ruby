@@ -3,7 +3,7 @@ class ClienteRepository
     puts 'Criando cliente na base de dados'
 
     begin
-      Cliente.new(parametros)
+      Cliente.criar(parametros)
     rescue => erro
       raise RuntimeError, 'Erro ao criar cliente'
     end
