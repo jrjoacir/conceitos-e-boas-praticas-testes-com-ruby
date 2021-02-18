@@ -12,7 +12,7 @@ RSpec.describe ClienteRepository do
       let(:parametros) { { id: cliente_id, nome: cliente_nome, data_nascimento: cliente_data_nascimento } }
 
       it 'retorna objeto com dados do Cliente' do
-        expect(Cliente).to receive(:new).with(parametros).and_return(cliente)
+        expect(Cliente).to receive(:criar).with(parametros).and_return(cliente)
         expect(subject.id).to eq cliente_id
         expect(subject.nome).to eq cliente_nome
         expect(subject.data_nascimento).to eq  Date.parse(cliente_data_nascimento)
@@ -26,7 +26,7 @@ RSpec.describe ClienteRepository do
       let(:parametros) { { id: cliente_id, nome: cliente_nome, data_nascimento: cliente_data_nascimento } }
 
       it 'retorna objeto da model Cliente' do
-        expect(Cliente).to receive(:new).with(parametros).and_raise(StandardError)
+        expect(Cliente).to receive(:criar).with(parametros).and_raise(StandardError)
         expect{subject}.to raise_error(RuntimeError, 'Erro ao criar cliente')
       end
     end
