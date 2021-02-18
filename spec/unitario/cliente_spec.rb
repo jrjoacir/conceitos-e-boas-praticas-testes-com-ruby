@@ -2,7 +2,22 @@ require_relative '../rspec_setup'
 
 RSpec.describe Cliente do
   describe 'new' do
-    subject { Cliente.new(parametros) }
+    subject { Cliente.new(id, nome, data_nascimento) }
+    
+    let(:id) { 101 }
+    let(:nome) { 'Nome do cliente' }
+    let(:data_nascimento) { Date.parse('02-07-1987') }
+    
+    it 'retorna objeto da classe cliente' do
+      expect(subject.class).to be Cliente
+      expect(subject.id).to eq id
+      expect(subject.nome).to eq nome
+      expect(subject.data_nascimento).to eq data_nascimento
+    end
+  end
+
+  describe 'criar' do
+    subject { Cliente.criar(parametros) }
 
     context 'Quando não é informado data de nascimento' do
       let(:id) { 101 }
@@ -57,22 +72,6 @@ RSpec.describe Cliente do
         expect(subject.nome).to eq nome
         expect(subject.data_nascimento).to eq Date.parse(data_nascimento)
       end
-    end
-  end
-
-  describe 'criar' do
-    subject { Cliente.criar(parametros) }
-    
-    let(:id) { 101 }
-    let(:nome) { 'Nome do cliente' }
-    let(:data_nascimento) { '02-07-1987' }
-    let(:parametros) { { id: id, nome: nome, data_nascimento: data_nascimento } }
-    
-    it 'retorna objeto da classe cliente' do
-      expect(subject.class).to be Cliente
-      expect(subject.id).to eq id
-      expect(subject.nome).to eq nome
-      expect(subject.data_nascimento).to eq Date.parse(data_nascimento)
     end
   end
 end
