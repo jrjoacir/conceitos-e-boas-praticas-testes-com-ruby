@@ -3,6 +3,7 @@
 ## Introdução
 
 Este projeto foi criado com a intenção de disseminar conceitos de implementação de testes utilizando a linguagem Ruby e suas bibliotecas.
+
 Nele você encontrará explicações dos principais conceitos e implementações didáticas sobre a aplicação destes conceitos.
 
 A biblioteca de testes escolhida para a execução dos testes foi a [Rspec](https://rspec.info/) devido sua alta adoção dentro da comunidade de desenvolvedores e de empresas que utilizam [Ruby](https://www.ruby-lang.org/pt/) como linguagem de programação.
@@ -53,7 +54,7 @@ Os testes elaborados neste projeto foram baseados em diversas fontes de estudo e
 <a id="como-a-implementacao-do-codigo-esta-divida"></a>
 
 ## Como a implementação do código está dividida
-Este projeto foi inspirado em uma implementação de API sem necessariamente respeitar todas as boas práticas de códificação para favorecer a didática do aprendizado dos conceitos de testes.
+Este projeto foi **inspirado** em uma implementação de API sem necessariamente respeitar todas as boas práticas de codificação para favorecer a didática do aprendizado dos conceitos de testes.
 
 Para ter foco na didática e manter-se simples, este projeto tentou utilizar o mínimo de bibliotecas possíveis e criou camadas para forçar cenários de estudo.
 
@@ -82,7 +83,7 @@ Sua responsabilidade é tratar os dados de saída em uma Controller. É esta cam
 Todos os testes implementados estão dentro do diretório `spec` e existem 2 divisões didaticamente criadas:
 
 ### Integração
-Aqui encontram-se os testes de integração que, de maneira simples, são teses que propositalmente não causam desvios em chamadas externas ao método testado a não ser que sejam recursos externos inalcansavéis ou inviáveis de alcançar.
+Aqui encontram-se os testes de integração que, de maneira simples, são testes que propositalmente não causam desvios em chamadas externas ao método testado a não ser que sejam recursos externos inalcansavéis ou inviáveis de alcançar.
 
 Em outras palavras, este tipo de teste vai percorrer sua excução pelo código interno do projeto da sua chamada até seu retorno sem desvios.
 
@@ -107,17 +108,21 @@ As fontes indicadas neste documento contém bastante conhecimento básico e até
 2. **Entenda a implementação do projeto**
 
 Para que os testes sejam realizados da maneira correta, precisamos entender quais são as regras estabelecidas pelo negócio. No caso deste projeto, é importante entender estas regras pela leitura da própria implementação. 
-Então a dica aqui é tentar entender o que o código faz começando a leitura por um método de alguma classe Controller e ir aprofundando até a execução da Controller terminar em seu retorno ao mundo exterior.
+
+Então a dica aqui é tentar entender o que o código faz começando a leitura por um método de alguma classe Controller e ir aprofundando até a execução da Controller terminar em seu retorno ao mundo exterior (response).
 
 3. **Entenda os testes de integração**
 
 Agora que entendeu as regras de implementação do projeto, vale começar lendo o teste de integraçao correspondente ao método estudado.
+
 Leia todas as condições de testes do método em questão e entenda o porquê de cada checagem e em quais camadas a execução entrou.
+
 Realize a execução dos testes e perceba a exibição de algumas mensagens espalhadas pelo código para tentar exibir por onde a *execução* passou.
 
 4. **Entenda os testes unitários**
 
 Dado que você entendeu todas as passagens dos testes de integração, agora é importante o entendimento dos testes unitários. Perceba as passagens de verificação do método testado e quais os desvios (*mocks*) feitos para que o teste não seja dependente de chamadas externas ao método testado.
+
 Perceba, também, que a rigorosidade dos testes unitários perante as checagens é diferente dos testes integrados.
 
 <a id="qual-o-foco-dos-testes-de-cada-camada"></a>
