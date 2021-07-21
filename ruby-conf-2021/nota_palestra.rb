@@ -9,10 +9,7 @@ class NotaPalestra
 
   def dar_nota(nota)
     @notas << nota
-    @nota_media = calcular_nota_media
   end
-
-  private
 
   def calcular_nota_media
     total_de_notas = 0
