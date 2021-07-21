@@ -1,0 +1,9 @@
+1.
+Então vamos calcular pegar as notas de palestra uma calcular a média.
+Vou criar o método construtor recebendo a palestra a ser avaliada.
+Já vou iniciar as variáveis de instância para guardar a nota média como zero e a lista de notas como um Array vazio.
+Desta forma, já indicamos que não há nota nenhuma desde início.
+
+2.
+Já vamos colocar as variáveis de instância como atributos de leitura para ser utilizada por outras classes
+
