@@ -4,7 +4,7 @@ RSpec.describe NotaPalestra do
   describe 'dar_nota' do
     subject { NotaPalestra.new('palestra_1') }
 
-    it 'retorna a nota média da palestra' do
+    it 'retorna a lista de notas da palestra' do
       expect(subject.dar_nota(10)).to eq [10]
       expect(subject.dar_nota(20)).to eq [10, 20]
     end
