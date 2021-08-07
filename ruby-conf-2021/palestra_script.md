@@ -31,7 +31,7 @@ O escopo do desenvolvimento é o mesmo, mas aqui a ideia é o Copiloto passar a 
 2. **Piloto** escolhe os nomes **nota** e **notas** para as variáveis de instância
 3. **Copiloto** pede para modificar o nome da variável **nota** para **nota_media** e explica a vantagem semântica
 4. **Copiloto** pede para se criar o método calcular_nota_media e explica que poderia fazer através de um _loop_, mas que o Ruby já fornece alguns métodos que ajudam na atividade
-5. **Copiloto** pede para deixar o método calcular_nota_media provado pois ainda não deve haver uso externo e caso precise da nota_media o atributo já resolve
+5. **Copiloto** pede para deixar o método calcular_nota_media privado pois ainda não deve haver uso externo e caso precise da nota_media o atributo já resolve
 6. **Piloto** pergunta se não seria o caso de já alterar a variável de instância e **Copiloto** confirma
 7. **Piloto** pede para criar o método público dar_nota que adiciona a nota dada a lista de notas e já calcula a nota média
 
